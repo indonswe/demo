@@ -11,6 +11,11 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 
 		System.out.println("Hej");
+
+		BankAccount account = new BankAccount(500, "Kalle", "Anka", 12345);
+
+
+		System.out.println(account.getBalanceAccount());
 	}
 
 }

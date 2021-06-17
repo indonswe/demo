@@ -1,6 +1,7 @@
 package Controller;
 
 
+import com.example.demo.BankAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class IndexController {
+
+    BankAccount account = new BankAccount(500, "Kalle", "Anka", 12345);
+
+
 
     //private final AnnonsRepository repository;
     //int sort = 1;
@@ -42,7 +47,15 @@ public class IndexController {
     }*/
 
     @GetMapping("/")
+
     public String getIndexPage(Model model) {
+
+        System.out.println(account.getBalanceAccount());
+
+        int account1 = account.getBalanceAccount();
+
+        model.addAttribute("balanceAccount", account1);
+
        /*if (sort==1) {
            model.addAttribute("annonsDTOs", repository.findAllAsDTO());
        }

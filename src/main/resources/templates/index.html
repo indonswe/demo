@@ -42,12 +42,28 @@
     </form>
     <table>
         <thead>
+        <tr>
+            <th>Bankacc</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+        <p th:text="'The amount of money on the account: '+${balanceAccount}"></p>
+        </tr>
+        </tbody>
+    </table>
+
+    <!--
+    <table>
+        <thead>
             <tr>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Image</th>
             </tr>
         </thead>
+
         <tbody>
             <tr th:each="dto : ${annonsDTOs}">
                 <td th:text="${dto.getName()}"></td>
@@ -56,5 +72,6 @@
             </tr>
         </tbody>
     </table>
+    -->
 </body>
 </html>
